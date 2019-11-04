@@ -1,6 +1,6 @@
 import numpy as np
 import sympy as sp
-from numpy import sqrt, sin, cos, pi
+from numpy import *
 
 #Calc valor of equation send by user
 def funcao(eq, ti):
