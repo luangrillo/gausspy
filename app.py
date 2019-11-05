@@ -39,3 +39,5 @@ print('Exact integral = ', int_symbolic(str(integral_symbolic), a, b))
 
 print('\n\nAbsolute error: ', abs(((b-a)/2)*integral_numerical-int_symbolic(str(integral_symbolic), a, b)))
 print('Relative Error: ', abs((((b-a)/2)*integral_numerical-int_symbolic(str(integral_symbolic), a, b))/int_symbolic(str(integral_symbolic), a, b))*100, '%')
+
+input("Press for exit..")
