@@ -1,6 +1,8 @@
 import numpy as np
 import sympy as sp
 from numpy import *
+import matplotlib
+import matplotlib.pyplot as plt
 
 #Calc valor of equation send by user
 def funcao(eq, ti):
@@ -25,10 +27,13 @@ points = int(input('Enter the amount of points: '))
 #Def points wi and ti
 witi = np.polynomial.legendre.leggauss(points)
 
+pontoseq=[]
+
 #Calc of integral
 integral_numerical = 0
 for i in range(points):
   integral_numerical += witi[1][i] * funcao(eq, a+(b-a)/2*(witi[0][i]+1))
+  pontoseq.append(integral_numerical)
 
 
 print('\n\nIntegral by symbolic resolution:\n')
@@ -41,3 +46,15 @@ print('\n\nAbsolute error: ', abs(((b-a)/2)*integral_numerical-int_symbolic(str(
 print('Relative Error: ', abs((((b-a)/2)*integral_numerical-int_symbolic(str(integral_symbolic), a, b))/int_symbolic(str(integral_symbolic), a, b))*100, '%')
 
 input("Press for exit..")
+
+#######plotting##########
+#range
+
+
+x=np.arange(a, b, 0.1)
+y=eval(str(integral_symbolic))
+
+plt.plot(x, y)
+plt.plot(pontoseq)
+plt.legend(['Curva Original', 'Quadratura Leggauss'], loc='best')
+plt.show()
