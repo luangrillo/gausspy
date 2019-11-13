@@ -45,7 +45,6 @@ print('Exact integral = ', int_symbolic(str(integral_symbolic), a, b))
 print('\n\nAbsolute error: ', abs(((b-a)/2)*integral_numerical-int_symbolic(str(integral_symbolic), a, b)))
 print('Relative Error: ', abs((((b-a)/2)*integral_numerical-int_symbolic(str(integral_symbolic), a, b))/int_symbolic(str(integral_symbolic), a, b))*100, '%')
 
-input("Press for exit..")
 
 #######plotting##########
 #range
@@ -54,7 +53,10 @@ input("Press for exit..")
 x=np.arange(a, b, 0.1)
 y=eval(str(integral_symbolic))
 
-plt.plot(x, y)
+##plt.plot(x, y)
 plt.plot(pontoseq)
-plt.legend(['Curva Original', 'Quadratura Leggauss'], loc='best')
+plt.legend(['Curva Original'], loc='best')
+
 plt.show()
+
+input("Press for exit..")
