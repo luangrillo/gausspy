@@ -2,7 +2,6 @@
 Simple Quadrature Gaussian Python
 <p>This script requires: </p>
 <p>Python >= 3.6</p>
+Run this command`s:
 <p>python -m pip install -U pip</p>
-<p>python -m pip install -U numpy</p>
-<p>python -m pip install -U sympy</p>
-<p>python -m pip install -U matplotlib</p>
+<p>py -m pip install -U numpy sympy matplotlib </b>

@@ -1,7 +1,6 @@
 import numpy as np
 import sympy as sp
 from numpy import *
-import matplotlib
 import matplotlib.pyplot as plt
 
 #Calc valor of equation send by user
@@ -50,12 +49,18 @@ print('Relative Error: ', abs((((b-a)/2)*integral_numerical-int_symbolic(str(int
 #range
 
 
-x=np.arange(a, b, 0.1)
+x=arange(a, b, 0.1)
 y=eval(str(integral_symbolic))
 
-##plt.plot(x, y)
-plt.plot(pontoseq)
-plt.legend(['Curva Original'], loc='best')
+plt.subplot(212)
+plt.plot(y)
+plt.ylabel('Integral exact')
+
+plt.subplot(211)
+plt.ylabel('Gaussian method')
+plt.title('Integral by gassian quadrature')
+plt.plot(pontoseq, lw=2, color='red')
+
 
 plt.show()
 
