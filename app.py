@@ -2,6 +2,7 @@ import numpy as np
 import sympy as sp
 from numpy import *
 import matplotlib.pyplot as plt
+from matplotlib.patches import Polygon
 
 #Calc valor of equation send by user
 def funcao(eq, ti):
@@ -49,18 +50,36 @@ print('Relative Error: ', abs((((b-a)/2)*integral_numerical-int_symbolic(str(int
 #range
 
 
-x=arange(a, b, 0.1)
-y=eval(str(integral_symbolic))
+def f(x):
+    return eval(str(integral_symbolic))
 
-plt.subplot(212)
-plt.plot(y)
-plt.ylabel('Integral exact')
+x=np.linspace(a*0.8,b*(1.2))
+y=f(x)
 
-plt.subplot(211)
-plt.ylabel('Gaussian method')
-plt.title('Integral by gassian quadrature')
-plt.plot(pontoseq, lw=2, color='red')
+fig, ax=plt.subplots()
+ax.plot(x,y, 'b', linewidth=2)
+ax.set_ylim(bottom=0)
 
+plt.title("Integral of f(x)")
+ix=np.linspace(a, b)
+iy=f(ix)
+verts=[(a,0), *zip(ix, iy), (b, 0)]
+poly= Polygon(verts, facecolor='0.9', edgecolor='0.5')
+ax.add_patch(poly)
+
+ax.text(0.4 * (a+b), f(b*1.1), r"$\int_" + str(int(a)) + "^" + str(int(b)) + "\hspace{1}" + sp.latex(integral_symbolic) + "\hspace{1}\mathrm{d}x$", horizontalalignment='center', fontsize=14)
+
+fig.text(0.9, 0.05, "$x$")
+fig.text(0.1, 0.9, '$y$')
+
+ax.spines['right'].set_visible(False)
+ax.spines['top'].set_visible(False)
+
+ax.xaxis.set_ticks_position('bottom')
+
+ax.set_xticks((a,b))
+ax.set_xticklabels(('$' + str(int(a)) + "$", "$" + str(int(b)) + '$'))
+ax.set_yticks([])
 
 plt.show()
 
