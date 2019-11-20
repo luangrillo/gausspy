@@ -11,4 +11,4 @@ py -m pip install -U numpy sympy matplotlib appJar
 ```
 <b>Open app.py</b>
 
-<img src="https://i.imgur.com/u44rKJm.png" />
+<center><img src="https://i.imgur.com/u44rKJm.png" /></center>
