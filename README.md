@@ -1,9 +1,9 @@
 # gausspy
-Simple Quadrature Gaussian Python&nbsp;
-This script requires:&nbsp;
-Python >= 3.6 && <= 3.7.0&nbsp;
-Run in terminal command:&nbsp;
-&nbsp;
+Simple Quadrature Gaussian Python<br/>
+This script requires<br/>
+Python >= 3.6 && <= 3.7.0<br/>
+Run in terminal command:<br/>
+<br/>
 ```
 python -m pip install -U pip
 ```
