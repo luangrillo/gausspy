@@ -62,7 +62,7 @@ def press(click):
     # range
 
     def f(x):
-        return eval(str(integral_symbolic))
+        return eval(str(eq))
 
     x = np.linspace(a*0.8, b*(1.2))
     y = f(x)
