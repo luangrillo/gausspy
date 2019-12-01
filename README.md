@@ -1,7 +1,7 @@
 # gausspy
 This is simple calculator based of method Gauss Legendre Quadrature (Gaussian quadrature integrate method). <br/>
 Requires:<br/>
-Python >= 3.6 && <= 3.7.0<br/>
+Python >= 3.6<br/>
 Run in terminal command:<br/>
 <br/>
 ```
