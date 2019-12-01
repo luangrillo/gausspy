@@ -1,6 +1,6 @@
 # gausspy
-Simple Quadrature Gaussian Python<br/>
-This script requires<br/>
+This is simple calculator based of method Gauss Legendre Quadrature (Gaussian quadrature integrate method). <br/>
+Requires:<br/>
 Python >= 3.6 && <= 3.7.0<br/>
 Run in terminal command:<br/>
 <br/>
@@ -15,3 +15,4 @@ py -m pip install -U numpy sympy matplotlib appJar
 Open app.py
 
 <center><img src="https://i.imgur.com/u44rKJm.png" /></center>
+
